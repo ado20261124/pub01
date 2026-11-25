@@ -1,0 +1,14 @@
+trigger: none
+
+pr:
+  branches:
+    include:
+      - main
+
+jobs:
+- job: smoke
+  pool: server
+  steps:
+  - task: Delay@1
+    inputs:
+      delayForMinutes: '0'
